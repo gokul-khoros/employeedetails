@@ -9,7 +9,7 @@ public class deletedetails {
             Connection conc = DriverManager.getConnection("jdbc:mysql://localhost:3306/heros", "root", "Goksravi99.");
             PreparedStatement stat = conc.prepareStatement("delete from employee where id= ?;");
             BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("enter the employee id to delete their detail");
+            System.out.println("enter the employee ID to delete their detail");
             int id= Integer.parseInt(bf.readLine());
             stat.setInt(1, id);
             int res=stat.executeUpdate();
